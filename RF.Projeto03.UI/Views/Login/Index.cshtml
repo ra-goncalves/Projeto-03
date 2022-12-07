@@ -1,0 +1,27 @@
+﻿@{
+    Layout = "~/Views/Login/_LoginLayout.cshtml";
+}
+
+<div id="campo-form">
+    <header><img src="~/IMG/logo.png" alt="logo" onclick="index.html"></header>
+    <form class="loginform" action="#">
+        <div class="campos email">
+            <div class="area-input">
+                <input type="email" name="email" id="iemail" placeholder="Email">
+                <span class="icone material-symbols-outlined">mail</span>
+                <span class="erros icone-erro material-symbols-outlined">error</span>
+            </div>
+            <div class="erros erro-msg">O email não pode estar em branco</div>
+        </div>
+        <div class="campos senha">
+            <div class="area-input">
+                <input type="password" name="password" id="ipassword" placeholder="Senha">
+                <span class="icone material-symbols-outlined">lock</span>
+                <span class="erros icone-erro material-symbols-outlined">error</span>
+            </div>
+            <div class="erros erro-msg">A senha não pode estar em branco</div>
+        </div>
+        <input type="submit" value="Entrar">
+    </form>
+</div>
+</body>

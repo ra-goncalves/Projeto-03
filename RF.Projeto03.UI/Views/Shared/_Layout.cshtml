@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operação curiosidade</title>
+    <link rel="shortcut icon" href="~/IMG/favicon.ico" type="image/x-icon">
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,500,1,0" />
+</head>
+<body>
+    <!--Divisão dos conteudo do site-->
+    <div class="container">
+        <!--Menu principal -->
+        <nav id="navegacao1">
+            <header><a href="/"> <img src="~/IMG/logo.png"> </a></header>
+            <ul>
+                <li class="menu">
+                    <a href="/">
+                        <span class="material-symbols-outlined">home</span>
+                        <span class="menu">HOME</span>
+                    </a>
+                </li>
+
+                <li class="menu">
+                    <a href="~/Cadastros/Index">
+                        <span class="material-symbols-outlined">group_add</span>
+                        <span class="menu">CADASTRO</span>
+                    </a>
+                </li>
+
+                <li class="menu">
+                    <a href="~/Relatorios/Index">
+                        <span class="material-symbols-outlined">analytics</span>
+                        <span class="menu">RELATÓRIO</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!--Campo de busca / Nome de usuario e botão de sair -->
+        <nav id="navegacao2">
+            <div class="nav2">
+                <div id="campobusca">
+                    <input type="search" name="busca" id="ibusca" placeholder="Pesquisar...">
+                </div>
+
+                <div id="perfil">
+                    <a href="#">Rafael Gonçalves</a>
+                </div>
+
+                <div id="sair">
+                    <a href="~/Login/Index">Sair</a>
+                </div>
+            </div>
+        </nav>
+        <!--Telas -->
+        <main>
+            @RenderBody()
+        </main>
+    </div>
+</body>
+</html>
