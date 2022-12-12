@@ -1,0 +1,50 @@
+<div class="campo-cadastrar-dados">
+    <div class="cadastrar-dados">
+        <form class="campo-form" method="post">
+            <div id="cNome">
+                <h3>1º Fatos e Dados</h3>
+                <label for="Nome">Nome</label>
+                <input type="hidden" name="idColaboradores" value="@Model.idColaboradores"/>
+                <input type="text" id="iNome" name="nomeColab" value="@Model.nomeColab">
+            </div>
+
+            <div id="cIdade">
+                <label for="Idade">Idade</label>
+                <input type="date" id="iIdade" name="idade" value="@string.Format("{0:yyyy-MM-dd}", Model.idade)">
+            </div>
+
+            <div id="cEmail">
+                <label for="Email">E-mail</label>
+                <input type="email" id="iEmail" name="emailColab" value="@Model.emailColab">
+            </div>
+
+            <div id="cEndereco">
+                <label for="Endereco">Endereço</label>
+                <input type="text" id="iEndereco" name="endereco" value="@Model.endereco">
+            </div>
+
+            <div id="cOutrasInfo">
+                <label for="OutrasInfo">Outras informações</label>
+                <textarea type="text" name="outrasInfo" rows="2" cols="80" required="">@Model.outrasInfo</textarea>
+            </div>
+
+
+            <div id="cInteresses">
+                <h3>2º Interesses</h3>
+                <textarea type="text" name="interesses" rows="3" cols="80" required="">@Model.interesses</textarea>
+            </div>
+
+            <div id="cSentimentos">
+                <h3>3º Sentimentos</h3>
+                <textarea type="text" name="sentimentos" rows="3" cols="80" required="">@Model.sentimentos</textarea>
+            </div>
+
+
+            <div id="cValores">
+                <h3>4º Valores</h3>
+                <textarea type="text" name="valores" rows="3" cols="80" required="">@Model.valores</textarea>
+            </div>
+            <button id="btnCadastrarDados" type="submit">GRAVAR</button>
+        </form>
+    </div>
+</div>

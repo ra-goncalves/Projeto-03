@@ -1,49 +1,49 @@
 ﻿<div class="campo-cadastrar-dados">
     <div class="cadastrar-dados">
-        <form class="campo-form">
+        <form class="campo-form" method="post">
             <div id="cNome">
                 <h3>1º Fatos e Dados</h3>
                 <label for="Nome">Nome</label>
-                <input type="text" id="iNome" name="Nome">
+                <input type="text" id="iNome" name="nomeColab">
             </div>
 
             <div id="cIdade">
                 <label for="Idade">Idade</label>
-                <input type="date" id="iIdade" name="Idade">
+                <input type="date" id="iIdade" name="idade">
             </div>
 
             <div id="cEmail">
                 <label for="Email">E-mail</label>
-                <input type="email" id="iEmail" name="Email">
+                <input type="email" id="iEmail" name="emailColab">
             </div>
 
             <div id="cEndereco">
                 <label for="Endereco">Endereço</label>
-                <input type="text" id="iEndereco" name="Endereco">
+                <input type="text" id="iEndereco" name="endereco">
             </div>
 
             <div id="cOutrasInfo">
                 <label for="OutrasInfo">Outras informações</label>
-                <textarea name="OutrasInfo" rows="2" cols="80"></textarea>
+                <textarea type="text" name="outrasInfo" rows="2" cols="80"></textarea>
             </div>
 
 
             <div id="cInteresses">
                 <h3>2º Interesses</h3>
-                <textarea name="Interesses" rows="3" cols="80"></textarea>
+                <textarea type="text" name="interesses" rows="3" cols="80"></textarea>
             </div>
 
             <div id="cSentimentos">
                 <h3>3º Sentimentos</h3>
-                <textarea name="Sentimentos" rows="3" cols="80"></textarea>
+                <textarea type="text" name="sentimentos" rows="3" cols="80"></textarea>
             </div>
 
 
             <div id="cValores">
                 <h3>4º Valores</h3>
-                <textarea name="Valores" rows="3" cols="80"></textarea>
+                <textarea type="text" name="valores" rows="3" cols="80" ></textarea>
             </div>
-            <button onclick="verificarCampos()" id="btnCadastrarDados" type="submit">GRAVAR</button>
+            <button id="btnCadastrarDados" type="submit">GRAVAR</button>
         </form>
     </div>
 </div>
