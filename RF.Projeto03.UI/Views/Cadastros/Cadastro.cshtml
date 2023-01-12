@@ -1,25 +1,41 @@
-﻿<div class="campo-cadastrar-dados">
+﻿@model RF.Projeto03.UI.Models.Colaboradores
+
+<div class="campo-cadastrar-dados">
     <div class="cadastrar-dados">
         <form class="campo-form" method="post">
             <div id="cNome">
                 <h3>1º Fatos e Dados</h3>
+                <label id="inativo">
+                    @Html.DropDownListFor(m => m.Inativo, new List<SelectListItem>
+                        { new SelectListItem{Text="Ativo", Value="Ativo",Selected=true},
+                        new SelectListItem{Text="Inativo", Value="Inativo"}})
+                </label>
+
                 <label for="Nome">Nome</label>
-                <input type="text" id="iNome" name="nomeColab">
+                <!--<input type="text" id="iNome" name="nomeColab">-->
+                @Html.TextBoxFor(m => m.nomeColab, new { @Value = "", @class = "red" })
+                <small>@Html.ValidationMessageFor(m => m.nomeColab, "", new { @class = "text-danger" })</small>
             </div>
 
             <div id="cIdade">
                 <label for="Idade">Idade</label>
-                <input type="date" id="iIdade" name="idade">
+                <!--<input type="date" id="iIdade" name="idade">-->
+                @Html.TextBoxFor(m => m.idade, new {@type = "date",@Value = "", @class = "red" })
+                <small>@Html.ValidationMessageFor(m => m.idade, "", new { @class = "text-danger " })</small>
             </div>
 
             <div id="cEmail">
                 <label for="Email">E-mail</label>
-                <input type="email" id="iEmail" name="emailColab">
+                <!--<input type="email" id="iEmail" name="emailColab">-->
+                @Html.TextBoxFor(m => m.emailColab, new { @Value = "", @class = "red" })
+                <small> @Html.ValidationMessageFor(m => m.emailColab, "", new { @class = "text-danger" })</small>
             </div>
 
             <div id="cEndereco">
                 <label for="Endereco">Endereço</label>
-                <input type="text" id="iEndereco" name="endereco">
+                <!--<input type="text" id="iEndereco" name="endereco">-->
+                @Html.TextBoxFor(m => m.endereco, new { @Value = "", @class = "red" })
+                <small>@Html.ValidationMessageFor(m => m.endereco, "", new { @class = "text-danger" })</small>
             </div>
 
             <div id="cOutrasInfo">
@@ -41,9 +57,14 @@
 
             <div id="cValores">
                 <h3>4º Valores</h3>
-                <textarea type="text" name="valores" rows="3" cols="80" ></textarea>
+                <textarea type="text" name="valores" rows="3" cols="80"></textarea>
             </div>
             <button id="btnCadastrarDados" type="submit">GRAVAR</button>
         </form>
     </div>
 </div>
+
+@section scripts{
+    <script src="~/Scripts/jquery.validate.min.js" defer></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js" defer></script>
+}

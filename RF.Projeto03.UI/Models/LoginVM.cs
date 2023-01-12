@@ -6,17 +6,14 @@ using System.Web;
 
 namespace RF.Projeto03.UI.Models
 {
-    public class Usuarios
+    public class LoginVM
     {
-        [Key]
-        public int idUsuarios { get; set; }
-
-        public string nome { get; set; }
-
+        [Required(ErrorMessage = "O campo email não pode estar em branco.")]
         public string email { get; set; }
+        [Required(ErrorMessage = "O campo senha não pode estar em branco.")]
 
         public string senha { get; set; }
 
-        public DateTime datacad { get; set; }
+        public string ReturnURL { get; set; }
     }
 }

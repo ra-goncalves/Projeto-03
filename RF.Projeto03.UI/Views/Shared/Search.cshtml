@@ -1,0 +1,21 @@
+﻿@foreach (var colaboradores in Model)
+{
+        <div class="search-tag-detail" id="colab-@colaboradores.idColaboradores">
+            <a id="idbusca" href="/Cadastros/Edit/@colaboradores.idColaboradores">@colaboradores.nomeColab</a>
+        </div>
+
+}
+<!--
+foreach (var colaboradores in Model)
+{
+    <div class="search-tag" id="colaboradores.idColaboradores">
+        <div class="search-tag-detail">
+            colaboradores.nomeColab
+            <span class="search-tag-close">
+                <i class="fa fa-times "></i>
+            </span>
+        </div>
+    </div>
+
+}
+-->

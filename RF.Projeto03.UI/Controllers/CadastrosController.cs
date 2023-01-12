@@ -8,6 +8,7 @@ using System.Web.Mvc;
 
 namespace RF.Projeto03.UI.Controllers
 {
+    [Authorize]
     public class CadastrosController : Controller
     {
         private readonly Projeto03DataContext _ctx = new Projeto03DataContext();
@@ -35,8 +36,11 @@ namespace RF.Projeto03.UI.Controllers
         [HttpPost]
         public ActionResult Edit(Colaboradores colaborador)
         {
-            _ctx.Entry(colaborador).State = System.Data.Entity.EntityState.Modified;
-            _ctx.SaveChanges();
+            if (ModelState.IsValid)
+            {
+                _ctx.Entry(colaborador).State = System.Data.Entity.EntityState.Modified;
+                _ctx.SaveChanges();
+            }
 
             return RedirectToAction("Index");
         }
@@ -44,10 +48,15 @@ namespace RF.Projeto03.UI.Controllers
         [HttpPost]
         public ActionResult Cadastro(Colaboradores colaborador)
         {
-            _ctx.Colaboradores.Add(colaborador);
-            _ctx.SaveChanges();
+            if (ModelState.IsValid)
+            {
+                _ctx.Colaboradores.Add(colaborador);
+                _ctx.SaveChanges();
 
-            return RedirectToAction("Index");
+                return RedirectToAction("Index");
+            }
+
+            return View(colaborador);
         }
 
         public ActionResult DelColab(int id)

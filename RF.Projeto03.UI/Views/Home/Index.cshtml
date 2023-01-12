@@ -1,15 +1,16 @@
-﻿<div class="home">
+﻿
+<div class="home">
     <div id="cards">
         <section>
-            <span class="infocard1">1258</span>
+            <span class="infocard1">@ViewBag.Count</span>
             <span class="infocard2">Total de cadastros</span>
         </section>
         <section>
-            <span class="infocard1">320</span>
+            <span class="infocard1">@ViewBag.CountCad</span>
             <span class="infocard2">Cadastros no último mês </span>
         </section>
         <section>
-            <span class="infocard1">46</span>
+            <span class="infocard1">@ViewBag.RevisaoCount</span>
             <span class="infocard2">Cadastros com pendência de revisão</span>
         </section>
     </div>
@@ -29,7 +30,7 @@
                         <tr>
                             <td>@colaborador.nomeColab</td>
                             <td>@colaborador.emailColab</td>
-                            <td>Ativo</td>
+                            <td>@colaborador.Inativo</td>
                         </tr>
                     }
 

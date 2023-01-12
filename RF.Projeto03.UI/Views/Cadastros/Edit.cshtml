@@ -1,16 +1,27 @@
+@model RF.Projeto03.UI.Models.Colaboradores
+
+
 <div class="campo-cadastrar-dados">
     <div class="cadastrar-dados">
         <form class="campo-form" method="post">
             <div id="cNome">
                 <h3>1º Fatos e Dados</h3>
+                <label id="inativoEdit">
+                    @Html.DropDownListFor(m => m.Inativo, new List<SelectListItem>
+                        { new SelectListItem{Text="Ativo", Value="Ativo"},
+                        new SelectListItem{Text="Inativo", Value="Inativo"}})
+                </label>
+
                 <label for="Nome">Nome</label>
-                <input type="hidden" name="idColaboradores" value="@Model.idColaboradores"/>
+                <input type="hidden" name="idColaboradores" value="@Model.idColaboradores" />
                 <input type="text" id="iNome" name="nomeColab" value="@Model.nomeColab">
+
             </div>
 
             <div id="cIdade">
                 <label for="Idade">Idade</label>
                 <input type="date" id="iIdade" name="idade" value="@string.Format("{0:yyyy-MM-dd}", Model.idade)">
+
             </div>
 
             <div id="cEmail">
@@ -48,3 +59,4 @@
         </form>
     </div>
 </div>
+

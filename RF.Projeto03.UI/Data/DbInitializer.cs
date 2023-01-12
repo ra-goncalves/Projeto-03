@@ -14,6 +14,13 @@ namespace RF.Projeto03.UI.Data
                                    interesses = "interesses", sentimentos = "sentimentos", valores = "valores" }
             };
             context.Colaboradores.AddRange(colaboradores);
+
+            context.Usuarios.Add(new Usuarios()
+            {
+                nome = "Rafael",
+                email = "rafael@teste.com",
+                senha = "1234"
+            });
             context.SaveChanges();
         }
     }

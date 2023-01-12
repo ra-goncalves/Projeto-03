@@ -10,12 +10,12 @@ namespace RF.Projeto03.UI.Data
 {
     public class Projeto03DataContext:DbContext
     {
-        public Projeto03DataContext():base(@"Data Source=RAFAEL\SQLRAFAEL;Initial Catalog=Projeto2;Integrated Security=True")
+        public Projeto03DataContext():base("ProjetoConn")
         {
-            Database.SetInitializer<Projeto03DataContext>(null);
         }
 
         public DbSet<Colaboradores> Colaboradores { get; set; }
+        public DbSet<Usuarios> Usuarios { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
